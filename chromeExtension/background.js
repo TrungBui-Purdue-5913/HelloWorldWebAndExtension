@@ -6,7 +6,7 @@ chrome.alarms.onAlarm.addListener(function (alarm) {
     console.log(alarm)
     chrome.notifications.create("my notification", {
         type: "basic",
-        iconUrl: "./icon48.png",
+        iconUrl: "icon48.png",
         title: "Check Your Posture",
         "message": "Check out our website for more!\n"+
         "Please reset the reminder within a minute if you want to use it again.",
@@ -23,6 +23,7 @@ function createAlarm(){
 }
 
 createAlarm()
+audioNotification()
 
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
