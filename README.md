@@ -9,3 +9,5 @@ To use our extension:
 4. Click 'Load unpacked' and select the folder you have created to store our files (E.g. Posture Check)
 5. The extension is now available on your Google Chrome. Enjoy!
 
+Our website:
+https://trungbui-purdue-5913.github.io/HelloWorldWebAndExtension/
