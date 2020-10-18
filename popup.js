@@ -1,4 +1,4 @@
-document.getElementById("add").addEventListener("click",remind);
+document.getElementById("reminder").addEventListener("click",remind);
 
 function remind(){
     var minutes = parseInt(document.getElementById("minute").value);
@@ -13,4 +13,11 @@ function remind(){
             console.log(response);
         })
     }
+    window.close();
+}
+
+document.getElementById("website").addEventListener("click",redirect);
+
+function redirect(){
+    chrome.tabs.update({url: "https://trungbui-purdue-5913.github.io/HelloWorldWebAndExtension/"});
 }
