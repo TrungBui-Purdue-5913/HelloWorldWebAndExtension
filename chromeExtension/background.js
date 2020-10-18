@@ -1,6 +1,11 @@
 console.log("in background script")
 
-let defaultDuration = 0.0;
+let defaultDuration = 60.0;
+
+function audioNotification(){
+    var sound = new Audio('short_tone.mp3');
+    sound.play();
+}
 
 chrome.alarms.onAlarm.addListener(function (alarm) {
     console.log(alarm)
@@ -9,15 +14,20 @@ chrome.alarms.onAlarm.addListener(function (alarm) {
         iconUrl: "./icon48.png",
         title: "Check Your Posture",
         "message": "Check out our website for more!",
+        requireInteraction: true,
     }, function (notificationID){
         console.log("displayed the notification")
     })
+    audioNotification()
 });
 
-function audioNotification(){
-    var sound = new Audio('short_tone.mp3');
-    sound.play();
+
+function createAlarm(){
+    chrome.alarms.create("check posture", {delayInMinutes : defaultDuration});
 }
+
+createAlarm()
+
 
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
@@ -29,9 +39,5 @@ chrome.runtime.onMessage.addListener(
     }
 )
 
-function createAlarm(){
-    chrome.alarms.create("check posture", {delayInMinutes : defaultDuration});
-}
 
-createAlarm()
-audioNotification()
+
