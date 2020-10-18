@@ -2476,7 +2476,7 @@ fieldset:disabled a.btn {
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: antiquewhite;
+  background-color: black;
 }
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
@@ -10328,7 +10328,7 @@ header.masthead .masthead-heading {
   color: white;
   border: 7px solid #e9ecef;
   border-radius: 100%;
-  background-color: #fed136;
+  background-color: paleturquoise;
 }
 .timeline > li .timeline-image h4 {
   font-size: 10px;
@@ -10454,7 +10454,7 @@ header.masthead .masthead-heading {
 
 section#contact {
   background-color: #212529;
-  background-image: url("../assets/img/map-image.png");
+  
   background-repeat: no-repeat;
   background-position: center;
 }
