@@ -1,7 +1,5 @@
 # HelloWorldWebAndExtension
-This repo is for Hello World Hackathon
-1.For web
-2.For extension
+This repo is for Purdue's Hello World Hackathon. It contains our website and extension.
 
 To use our extension:
 1. Create a folder to store our files (E.g Posture Check)
