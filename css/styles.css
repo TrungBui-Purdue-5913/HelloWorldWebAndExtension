@@ -10098,7 +10098,7 @@ img::-moz-selection {
   letter-spacing: 0.0625em;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: deepskyblue;
+  color: deepskyblue
 }
 
 @media (min-width: 992px) {
