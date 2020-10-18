@@ -1,6 +1,6 @@
 console.log("in background script")
 
-let defaultDuration = 1.0;
+let defaultDuration = 0.0;
 
 chrome.alarms.onAlarm.addListener(function (alarm) {
     console.log(alarm)
@@ -14,17 +14,24 @@ chrome.alarms.onAlarm.addListener(function (alarm) {
     })
 });
 
-function createAlarm(){
-    chrome.alarms.create("check posture", {delayInMinutes : defaultDuration});
+function audioNotification(){
+    var sound = new Audio('short_tone.mp3');
+    sound.play();
 }
-
-createAlarm()
 
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         console.log("Event received in background page");
         defaultDuration = request.minutes * 1.0;
         createAlarm()
+        audioNotification()
         sendResponse({success: true});
     }
 )
+
+function createAlarm(){
+    chrome.alarms.create("check posture", {delayInMinutes : defaultDuration});
+}
+
+createAlarm()
+audioNotification()
